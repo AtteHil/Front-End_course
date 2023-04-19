@@ -38,3 +38,105 @@
         }
     }
 }
+
+
+// Menu overlay to create menu of the site
+
+.menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    opacity: 0.7;
+    visibility: hidden;
+
+    &.show {
+        visibility: visible;
+    }
+
+    &-branding,
+    &-nav {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+        float: left;
+        width: 50%;
+        height: 100vh;
+        overflow: hidden;
+
+    }
+
+    &-nav {
+        margin: 0;
+        padding: 0;
+        background: darken($primary-color, 5);
+        list-style: none;
+        transform: translate3d(600px, 0, 0); // makes sidebar hidden
+        @include easeOut;
+
+        &.show {
+            //sidemenu slides in from right
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    // side panel customation and sliding from left
+    &-branding {
+        background: lighten($secondary-color, 5);
+        transform: translate3d(-600px, 0, 0);
+        @include easeOut;
+
+        &.show {
+            transform: translate3d(0, 0, 0);
+        }
+
+        .portrait {
+            width: 250px;
+            height: 250px;
+            background: url('../img/me.jpg');
+            border-radius: 50%;
+            border: solid 3px $primary-color;
+            background-size: cover;
+            background-position: center 40%;
+        }
+
+
+
+    }
+
+    .nav-item {
+        transform: translate3d(600px, 0, 0);
+        @include easeOut;
+
+
+        &.show {
+            transform: translate3d(0, 0, 0);
+        }
+
+        &.current>a {
+            color: white;
+        }
+    }
+
+    .nav-link {
+        display: inline-block;
+        position: relative;
+        font-size: 25px;
+        text-transform: uppercase;
+        padding: 15px;
+        font-weight: bold;
+        color: $secondary-color;
+        @include easeOut;
+
+        &:hover {
+            color: white;
+        }
+    }
+}
+
+// delaying nav items slide from right
+@for $x from 1 through 4 {
+    .nav-item:nth-child(#{$x}) {
+        transition-delay: $x * 0.15s;
+    }
+}
