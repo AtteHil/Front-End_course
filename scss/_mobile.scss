@@ -1,5 +1,5 @@
 // different screen sizes
-
+// sizes for different screens are set in config
 @include mediaXl {}
 
 @include mediaLg {}
@@ -18,6 +18,7 @@
 
     ul.menu-nav,
     div.menu-branding {
+        // adjusts text of the menu
         float: none;
         width: 100%;
         min-height: 0;
@@ -30,6 +31,7 @@
     }
 
     .menu-nav {
+        // adjustment of the sidepanels coming on top of eachother from different sides
         height: 75vh;
         transform: translate3d(-100%, 0, 0);
         font-size: 24px;
@@ -40,6 +42,7 @@
         transform: translate3d(100%, 0, 0);
 
         .portrait {
+            // adjusts portrait picture
             background-position: center 70%;
             width: 150px;
             height: 150px;

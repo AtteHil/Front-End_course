@@ -91,6 +91,7 @@
         }
 
         .portrait {
+            // portrait in the menu. picture is tset and adjustet to the center with circular border
             width: 250px;
             height: 250px;
             background: url('../img/me.jpg');
@@ -119,6 +120,7 @@
     }
 
     .nav-link {
+        //menu title made to look nice and have the easeout function on them with color white
         display: inline-block;
         position: relative;
         font-size: 25px;
