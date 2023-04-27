@@ -5,7 +5,7 @@
   "main": "index.js",
   "homepage": "https://Rookit15.github.io/Front-End_course",
   "scripts": {
-    "sass": "node-sass -w scss/ -o own_project/dist/css/ --recursive",
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
     "deploy": "gh-pages -d dist"
   },
   "author": "",
