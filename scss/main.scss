@@ -1,5 +1,6 @@
 @import 'config';
 @import 'menu';
+@import 'mobile';
 
 * {
     box-sizing: border-box;
@@ -30,6 +31,7 @@ body {
     background-color: $primary-color;
     color: set-text-color($primary-color);
     height: 100%;
+
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.5;
@@ -41,11 +43,11 @@ body {
     gap: 50px 30px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
-        "Bio story"
-        "teamimage contactUs"
+        'Bio story'
+        'teamimage contactUs'
     ;
 
-    .text-secondary {
+    .Bio {
         grid-area: Bio;
         font-size: 2rem;
     }
